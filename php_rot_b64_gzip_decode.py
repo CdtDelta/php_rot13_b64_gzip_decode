@@ -12,6 +12,7 @@ import base64
 import codecs
 
 # This function will take care of the base64 and the gz part
+# Got this function from: http://www.php2python.com/wiki/function.gzinflate/
 def gzinflate(base64_string):
     compressed_data = base64.b64decode(base64_string)
     return zlib.decompress(compressed_data, -15)
